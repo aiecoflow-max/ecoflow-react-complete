@@ -1,4 +1,4 @@
-export default function Home({ lang = 'en' }) {
+export default function Home({ lang }) {
   const t = {
     en: {
       title: "AI Shapes the Future of Sustainable Architecture",
@@ -16,7 +16,7 @@ export default function Home({ lang = 'en' }) {
     <section className="p-8 text-center">
       <h1 className="text-4xl font-bold mb-4">{t.title}</h1>
       <p className="text-lg mb-6">{t.subtitle}</p>
-      <a href="/tool">
+      <a href={lang === 'ko' ? '/ko/tool' : '/tool'}>
         <button className="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition">
           {t.tryButton}
         </button>
